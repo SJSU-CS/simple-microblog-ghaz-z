@@ -6,6 +6,7 @@ import org.springframework.boot.ExitCodeGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.bind.annotation.PostMapping;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
@@ -22,7 +23,8 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
     @Autowired
     private ConfigurableApplicationContext context;
 
-    @Command
+    @Command(name = "post", description = "Post messages")
+    @PostMapping("/messages/create")
     public int post(@Parameters String message, @Parameters(defaultValue = "null") String attachment) {
         System.out.println("I wish i knew how to send " + message);
         if (attachment !=null) {
@@ -30,8 +32,25 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
         }
         return 2;
     }
+    @Command(name = "list", description = "List messages")
+    static class ListPosts implements Callable<Integer>{
+        @CommandLine.Option(names = "--starting", description = "Starting message ID")
+        private int startingId;
 
-    @Command
+        @CommandLine.Option(names = "--count", description = "Number of messages to retrieve")
+        private int count = 10; // Default to 10 if not specified
+
+        @CommandLine.Option(names = "--save-attachment", description = "Save attachments to files")
+        private boolean saveAttachment;
+
+        @Override
+        public Integer call() throws Exception {
+            return 2;
+        }
+    }
+
+    @Command(name = "create", description = "Create userid")
+    @PostMapping("/user/create")
     int create(@Parameters String id) {
         System.out.println("I wish i knew how to create " + id);
         return 2;
