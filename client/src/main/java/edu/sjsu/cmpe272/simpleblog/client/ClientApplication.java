@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.client.RestTemplate;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Parameters;
@@ -17,6 +18,8 @@ import java.util.concurrent.Callable;
 @Command
 public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
 
+    RestTemplate restTemplate = new RestTemplate();
+
     @Autowired
     CommandLine.IFactory iFactory;
 
@@ -24,35 +27,39 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
     private ConfigurableApplicationContext context;
 
     @Command(name = "post", description = "Post messages")
-    @PostMapping("/messages/create")
+    @PostMapping(path = "/messages/create", consumes = "application/json", produces = "application/json")
     public int post(@Parameters String message, @Parameters(defaultValue = "null") String attachment) {
-        System.out.println("I wish i knew how to send " + message);
+        /**System.out.println("I wish i knew how to send " + message);
         if (attachment !=null) {
             System.out.println("And upload " + attachment);
         }
+        return 2;**/
+
+
+
+        //1. Request needs to be formatted into a post request
+        //2. That request is then sent in and received by the server (we can worry about picking the information up on the server side)
+        //3. Request body needs to match that of the one shown in the api (we can either define a class or make a JSON either works)
         return 2;
     }
     @Command(name = "list", description = "List messages")
-    static class ListPosts implements Callable<Integer>{
-        @CommandLine.Option(names = "--starting", description = "Starting message ID")
-        private int startingId;
-
-        @CommandLine.Option(names = "--count", description = "Number of messages to retrieve")
-        private int count = 10; // Default to 10 if not specified
-
-        @CommandLine.Option(names = "--save-attachment", description = "Save attachments to files")
-        private boolean saveAttachment;
-
-        @Override
-        public Integer call() throws Exception {
-            return 2;
-        }
+    @PostMapping("/messages/list")
+    public int listing(@CommandLine.Option(names = "--starting",
+            description = "Starting message ID") int startingID,
+                       @CommandLine.Option(names = "--count", description = "Number of messages to retrieve", fallbackValue = "10") int count,
+                       @CommandLine.Option(names = "--save-attachment", description = "Save attachments to files") boolean saveAttachment){
+        // Want to check if the
+        //if --save-attachment is given, a file will be created with the base64 decoded attachment named message-id.ou
+        //the number of messages to retrieve may be greater than 20, so you may need to make additional requests under the covers. number defaults to 10.
+        //if --starting is not give, start at the end.
+        return 2;
     }
 
     @Command(name = "create", description = "Create userid")
     @PostMapping("/user/create")
     int create(@Parameters String id) {
-        System.out.println("I wish i knew how to create " + id);
+        //System.out.println("I wish i knew how to create " + id);
+
         return 2;
     }
 
