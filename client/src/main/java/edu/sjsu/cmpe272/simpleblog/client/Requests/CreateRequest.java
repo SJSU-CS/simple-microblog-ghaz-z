@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe272.simpleblog.client.Requests;
+package edu.sjsu.cmpe272.simpleblog.server.Requests;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

@@ -1,14 +1,30 @@
 package edu.sjsu.cmpe272.simpleblog.server.dataClasses;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+import java.security.PublicKey;
+import java.util.List;
+
+@Entity
 public class User {
-    String userID;
-    String publicKey;
-    public User(String userID, String publicKey){
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private String userID;
+    private PublicKey publicKey;
+
+
+    public User(String userID, PublicKey publicKey){
         this.userID = userID;
         this.publicKey = publicKey;
     }
 
-    public String getPublicKey() {
+    protected User(){}
+
+    public PublicKey getPublicKey() {
         return publicKey;
     }
 
@@ -16,7 +32,7 @@ public class User {
         return userID;
     }
 
-    public void setPublicKey(String publicKey) {
+    public void setPublicKey(PublicKey publicKey) {
         this.publicKey = publicKey;
     }
 

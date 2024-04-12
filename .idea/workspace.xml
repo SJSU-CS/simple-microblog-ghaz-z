@@ -5,21 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e85e9165-3e6f-4fb3-ab9a-35de8b15cbad" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/CreateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ListResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/PostResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/CreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/ListRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/PostRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/Post.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Repositories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/CreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/CreateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/SignatureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/SignatureService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ResponseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/controller/ResponseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/Requests/CreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/Requests/CreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Responses/CreateResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Responses/CreateResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +23,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -122,7 +117,7 @@
       <updated>1712725076002</updated>
       <workItem from="1712725077831" duration="5199000" />
       <workItem from="1712812918324" duration="2433000" />
-      <workItem from="1712862434714" duration="7520000" />
+      <workItem from="1712862434714" duration="11600000" />
     </task>
     <servers />
   </component>
