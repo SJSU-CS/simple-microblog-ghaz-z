@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="e85e9165-3e6f-4fb3-ab9a-35de8b15cbad" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/CreateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/ListRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/PostRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/SignatureService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ResponseController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/CreateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ListResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/PostResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/CreateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/ListRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/Requests/PostRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/Post.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/dataClasses/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/client/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/ClientApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/ClientApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/CreateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/CreateRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/SignatureService.java" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main/java/edu/sjsu/cmpe272/simpleblog/client/SignatureService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/ResponseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server/controller/ResponseController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +43,9 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2etXv7dWtoYBeybC2Lwj3W3ciic" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,10 +59,10 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ClientApplication.executor": "Run",
     "Spring Boot.ServerApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ghazz/OneDrive/BLOB/Documents/GitHub/simple-microblog-ghaz-z/server/src/main/java/edu/sjsu/cmpe272/simpleblog/server",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -63,7 +71,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Spring Boot.ClientApplication">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ghazz\OneDrive\BLOB\Documents\GitHub\simple-microblog-ghaz-z\server\src\main\java\edu\sjsu\cmpe272\simpleblog\server" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ServerApplication">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="simple-microblog-ghaz-z" />
       <method v="2">
@@ -108,7 +121,8 @@
       <option name="presentableId" value="Default" />
       <updated>1712725076002</updated>
       <workItem from="1712725077831" duration="5199000" />
-      <workItem from="1712812918324" duration="10245000" />
+      <workItem from="1712812918324" duration="2433000" />
+      <workItem from="1712862434714" duration="7520000" />
     </task>
     <servers />
   </component>

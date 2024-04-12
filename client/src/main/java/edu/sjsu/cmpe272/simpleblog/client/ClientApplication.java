@@ -27,7 +27,7 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
     private ConfigurableApplicationContext context;
 
     @Command(name = "post", description = "Post messages")
-    @PostMapping(path = "/messages/create", consumes = "application/json", produces = "application/json")
+    //@PostMapping(path = "/messages/create")
     public int post(@Parameters String message, @Parameters(defaultValue = "null") String attachment) {
         /**System.out.println("I wish i knew how to send " + message);
         if (attachment !=null) {
@@ -43,7 +43,7 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
         return 2;
     }
     @Command(name = "list", description = "List messages")
-    @PostMapping("/messages/list")
+    //@PostMapping("/messages/list")
     public int listing(@CommandLine.Option(names = "--starting",
             description = "Starting message ID") int startingID,
                        @CommandLine.Option(names = "--count", description = "Number of messages to retrieve", fallbackValue = "10") int count,
@@ -56,7 +56,7 @@ public class ClientApplication implements CommandLineRunner, ExitCodeGenerator {
     }
 
     @Command(name = "create", description = "Create userid")
-    @PostMapping("/user/create")
+    //@PostMapping("/user/create") //these cannot be postmapping these are requests that are being made
     int create(@Parameters String id) {
         //System.out.println("I wish i knew how to create " + id);
 

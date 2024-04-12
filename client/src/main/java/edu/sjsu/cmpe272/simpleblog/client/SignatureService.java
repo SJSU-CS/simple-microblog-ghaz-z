@@ -34,4 +34,13 @@ public class SignatureService {
         rsa.update(hash);
         return rsa.sign();
     }
+
+    public void setObjectMapper(ObjectMapper objectMapper) {
+        this.objectMapper = objectMapper;
+    }
+
+    public void setPrivateKey(PrivateKey privateKey) {
+        this.privateKey = privateKey;
+    }
+
 }

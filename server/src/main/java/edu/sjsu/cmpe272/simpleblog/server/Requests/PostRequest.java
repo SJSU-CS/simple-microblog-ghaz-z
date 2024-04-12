@@ -1,4 +1,4 @@
-package edu.sjsu.cmpe272.simpleblog.client;
+package edu.sjsu.cmpe272.simpleblog.server.Requests;
 
 public class PostRequest {
 /**
